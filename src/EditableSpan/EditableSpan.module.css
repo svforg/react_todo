@@ -1,0 +1,37 @@
+.editableSpan {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 170px;
+    padding: 0 94px 0 12px;
+    overflow: hidden;
+
+    color: #333;
+    background: #eaeaea;
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    white-space: nowrap;
+    line-height: 34px;
+    text-overflow: ellipsis;
+    cursor: text;
+    transition: background .3s;
+}
+
+.editableSpan:hover,
+.editableSpan:focus {
+    background-color: #fff;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.editableSpan:after {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 16px;
+    height: 100%;
+
+    transform: translateY(-50%);
+    background: url('https://raw.githubusercontent.com/svforg/Reactive_test/master/dev/general/img/service/form/icon-edit.svg') no-repeat center / contain;
+    content: '';
+}
